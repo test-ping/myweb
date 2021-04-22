@@ -4,7 +4,7 @@ a{
 :root {
     --iconsize:48px ;
 }
-i.fas{
+i.fas, i.fab{
     display: block;
     font-size: var(--iconsize);
 }
