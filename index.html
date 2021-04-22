@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人網頁履歷</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/Reset.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js' integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA==' crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/ea703aea6c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/Education.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/Contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/rwd.css">
+</head>
+<body>
+    <input type="checkbox" id='navswitch'>
+    <nav>
+        <ul>
+            <li> <a href="#top">回頂端</a>  </li>
+            <li> <a href="#about" >關於我</a>  </li>
+            <li> <a href="#Education">學歷</a></li>
+            <li><a href="#skill">我的專長</a></li>
+            <li><a href="#Contact">與我聯繫</a></li>
+        </ul>
+        <label for="navswitch"><i class="fas fa-caret-square-down"></i></label>
+    </nav>
+
+    <header>
+        <div class="greet">
+            <p>您好</p>
+            <h1>我的名字是楊粒平</h1>
+            <p> 這是我的個人網頁履歷</p>
+            <a href="#about" class="button">關於我</a>
+        </div>
+        <div class="photo">
+            <img src="images/photo.jpg">
+        </div>
+    </header>
+
+    <section class='about' id='about'> 
+        <div class="about-title">
+            <h2><i class="fas fa-address-card"></i> 
+                About me
+            </h2> 
+        </div>
+        <div class="about-content">
+            　　自傳區
+        </div>
+        <div class="about-contact"></div>
+    </section>
+
+    <setion class="Education" id="Education"> 
+        <div class="Education-title"> 
+            <h2><i class="fas fa-school"></i> Education</h2>
+        </div>
+
+        <div class="schoollist">
+            <div class="schoolPhoto">
+                <img src="" data-src='images/2.jpg' style="visibility:hidden">
+                <div class="schoolcontent">
+                    四箴國中<br>
+                    2005年~2008年
+                </div>
+            </div>
+            <div class="schoolPhoto">
+                <img src="#" data-src='images/3.jpg' style="visibility:hidden"> 
+                <div class="schoolcontent">
+                    僑泰高級中學 <br>
+                    資訊科<br>
+                    2008年~2011年
+                </div>
+            </div>                        
+            <div class="schoolPhoto" >
+                <img src="#" data-src='images/4.jpg' style="visibility:hidden">
+                <div class="schoolcontent">
+                    朝陽科技大學 <br>
+                    資訊與通訊系<br>
+                    2011年~2015年
+                </div>
+            </div>
+            <div class="schoolPhoto">
+                <img src="#" data-src='images/5.jpg' style="visibility:hidden">
+                <div class="schoolcontent">
+                    國立彰化師範大學 <br>
+                    資訊工程學系碩士班<br>
+                    2016年~2019年
+                </div>
+            </div>     
+        </div>
+    </setion>
+
+    <section class='skill' id='skill'>
+        <div class="skill-title">
+            <h2>
+                <i class="fas fa-laptop-code"></i> 
+                Skill
+            </h2>
+        </div>
+        <div class="skill-content" >
+            <!-- HTML：<progress max="100" :value="css" style="height:50px;"></progress> -->
+            <div class='progressarea'>
+                <span>HTML：</span>
+                <div class="progressborder">
+                    <div class="progress" data-name='html' :style="progress1">
+                       <span>{{html}}%</span> 
+                    </div>
+                </div>
+                <span>CSS：</span> 
+                <div class="progressborder">
+                    <div class="progress" data-name='CSS' :style="progress2">
+                       <span>{{css}}%</span> 
+                    </div>
+                </div>
+                <span>Javascript：</span>
+                <div class="progressborder">
+                    <div class="progress"  data-name='Javascript' :style="progress3">
+                        <span>{{javascript}}%</span>
+                    </div>
+                </div>
+                <span>Vue：</span>
+                <div class="progressborder">
+                    <div class="progress" data-name='Vue' :style="progress4">
+                        <span>{{vue}}%</span>
+                    </div>
+                </div>
+                <span>Bootstrap：</span>
+                <div class="progressborder">
+                    <div class="progress" data-name='bootstrap' :style="progress5">
+                        <span>{{bootstrap}}%</span>
+                    </div>
+                </div>
+                <span>Git：</span>
+                <div class="progressborder">
+                    <div class="progress" data-name='git' :style="progress6">
+                        <span>{{git}}%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <setion class="Contact-title" id="Contact">
+        <h2>與我聯繫</h2>
+        <div class="Contact-data">
+            <div class="card">
+                <i class="fas fa-mobile-alt" ></i>
+                <br>
+                <div>Phone</div>
+                <div> 
+                    <p>主用電話：0906137382</p>  
+                    <p>備用電話：0970504571</p>  
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-map-marker-alt"></i>
+                <br>
+                <div >Address</div>
+                <div> 40768 台中市西屯區工業區三十八路三十七號  </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-envelope" ></i>
+                <br>
+                <div>E-mail</div>
+                <div> 
+                    <p>wlko2380127@gmail.com</p> 　
+                    <p style="margin-top:-25px;">wlts80127@gmail.com</p>   
+                </div>
+            </div>
+            <div class="card">
+                <i class="fab fa-line"></i>
+                <br>
+                <div>Line</div>
+                <div> 
+                    <p style="margin-top:40px;">6wctp</p>
+                </div>
+            </div>
+        </div>
+        <Form class="Contact-form">
+            <input type="text" name="name" placeholder="Name"> <br>
+            <input type="email" name="email" placeholder="your E-mail" id="Email1"> <br>
+            <textarea name="message" cols="30" rows="10" placeholder="Message" ></textarea><br>
+            <input type="submit" value="送信"> 
+        </Form>
+    </setion>
+
+    <footer>
+        Copyright © 2021 YANG,LI-PING. All rights reserved.
+    </footer>
+
+    <script src='js/progressload.js'></script>
+    <script src='js/imgFadein.js'></script>
+    <script src='js/navHandler.js'></script>
+
+    <script>
+        const button = document.querySelector('.Contact-form').addEventListener('submit',e=>{
+            e.preventDefault(); 
+            let temp = document.getElementById("Email1").value;
+            let myreg = /^[^\[\]\(\)\\<>:;,@.]+[^\[\]\(\)\\<>:;,@]*@[a-z0-9A-Z]+(([.]?[a-z0-9A-Z]+)*[-]*)*[.]([a-z0-9A-Z]+[-]*)+$/g;
+            if(myreg.test(temp) == false) alert('請輸入有效的E_mail！');
+            else alert("謝謝您的來信，我看到之後會盡快回覆。");
+        });
+        
+        document.querySelector('.button').style.opacity = '0';
+        document.querySelector('.button').addEventListener('animationend',function(e){this.style.opacity = ''; });
+
+    </script>
+
+</body>
+</html>

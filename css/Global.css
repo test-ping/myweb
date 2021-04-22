@@ -1,0 +1,15 @@
+a{
+    color: black;
+}
+:root {
+    --iconsize:48px ;
+}
+i.fas{
+    display: block;
+    font-size: var(--iconsize);
+}
+body{
+    display: grid;
+    grid-template-rows: 50px 800px 500px 1200px 500px 1000px 30px;
+    grid-template-columns: 1fr;
+}
