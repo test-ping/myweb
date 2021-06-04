@@ -1,6 +1,6 @@
 @media screen and (max-width:1350px){
     body{
-        grid-template-rows: 50px 800px 1fr 1050px 500px 1000px 30px;
+        grid-template-rows: 50px 800px 1fr 1050px 500px 700px 1000px 30px;
     }
     .schoolPhoto{
         height:450px;
@@ -9,7 +9,7 @@
 }
 @media screen and (max-width:1160px){
     body{
-        grid-template-rows: 50px 800px 1fr 950px 500px 1000px 30px;
+        grid-template-rows: 50px 800px 1fr 950px 500px 700px 1000px 30px;
     }
     .schoolPhoto{
         height:400px;
@@ -24,7 +24,7 @@
 }
 @media screen and (max-width:1024px){
     body{
-        grid-template-rows: 50px 800px 1fr 850px 400px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 850px 400px 1300px  1250px 30px;
     }
     div[class$='title'] h2{
         font-size: 1.4rem !important;
@@ -36,7 +36,7 @@
 }
 @media screen and (max-width:895px){
     body{
-        grid-template-rows: 50px 800px 1fr 750px 400px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 750px 400px 1300px 1250px 30px;
     }
     .schoolPhoto{
         height:300px;
@@ -45,7 +45,7 @@
 }
 @media screen and (max-width:768px){
     body{
-        grid-template-rows: 50px 800px 1fr 650px 400px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 650px 400px 1300px 1250px 30px;
     }
     .schoolPhoto{
         height:250px;
@@ -54,7 +54,7 @@
 }
 @media screen and (max-width:645px){
     body{
-        grid-template-rows: 50px 800px 1fr 590px 400px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 590px 400px 1300px 1250px 30px;
     }
     .Education{
         grid-template-columns: 1fr 75% minmax(120px,15%) 1fr;
@@ -81,7 +81,7 @@
         display: block;
     }
     body{
-        grid-template-rows: 50px 800px 1fr 1500px 520px 1900px 30px;
+        grid-template-rows: 50px 800px 1fr 1500px 520px 1500px 1900px 30px;
     }
     nav{
         transition: transform 0.4s;
