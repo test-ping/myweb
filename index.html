@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/Education.css">
     <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/Work.css">
     <link rel="stylesheet" href="css/Contact.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/animation.css">
@@ -25,11 +26,12 @@
     <input type="checkbox" id='navswitch'>
     <nav>
         <ul>
-            <li> <a href="#top">回頂端</a>  </li>
-            <li> <a href="#about" >關於我</a>  </li>
+            <li> <a href="#top">TOP</a>  </li>
+            <li> <a href="#about">關於</a>  </li>
             <li> <a href="#Education">學歷</a></li>
-            <li><a href="#skill">我的專長</a></li>
-            <li><a href="#Contact">與我聯繫</a></li>
+            <li><a href="#skill">技能</a></li>
+            <li><a href="#Work">作品</a></li>
+            <li><a href="#Contact">聯繫</a></li>
         </ul>
         <label for="navswitch"><i class="fas fa-caret-square-down"></i></label>
     </nav>
@@ -74,7 +76,6 @@
                 <img src="" data-src='images/2.jpg' style="visibility:hidden">
                 <div class="schoolcontent">
                     四箴國中<br>
-                    2005年~2008年
                 </div>
             </div>
             <div class="schoolPhoto">
@@ -82,7 +83,6 @@
                 <div class="schoolcontent">
                     僑泰高級中學 <br>
                     資訊科<br>
-                    2008年~2011年
                 </div>
             </div>                        
             <div class="schoolPhoto" >
@@ -90,7 +90,6 @@
                 <div class="schoolcontent">
                     朝陽科技大學 <br>
                     資訊與通訊系<br>
-                    2011年~2016年
                 </div>
             </div>
             <div class="schoolPhoto">
@@ -98,7 +97,6 @@
                 <div class="schoolcontent">
                     國立彰化師範大學 <br>
                     資訊工程學系碩士班<br>
-                    2016年~2019年
                 </div>
             </div>     
         </div>
@@ -154,169 +152,6 @@
 
     </section>
 
-    <style>
-        #Work{
-            grid-row:6/7;
-            grid-column: 1/1;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            display: grid;
-            grid-template-rows: 1fr; 
-            grid-template-columns: 1fr 80% minmax(120px,15%) 1fr;
-            background-color: #f0a2e3;
-        }
-        .Work .Work-title{
-            grid-row:1/2;
-            grid-column: 3/4;
-            position: relative;
-            font-family:'Times New Roman', Times, serif;
-            font-weight: bold;
-            text-align: center;
-        }
-        .Work .Work-title::before, .Work-title::after{
-            content:'';
-            position: absolute;
-            border-right: 2px black solid ;
-            height:100%;
-            top:50%;
-            transform: translateY(-50%); 
-        }
-        .Work .Work-title::before{
-            left:5px;
-        }
-        .Work .Work-title:after{
-            left:0px;
-        }
-        .Work .Work-title h2{
-            display: block;
-            position: absolute;
-            top:50%;
-            width: 100%;
-            font-size: 1.8rem;
-            transform: translateY(-50%);
-        }
-        .worklist{
-            grid-row:1/1;
-            grid-column: 2/3;
-            display: flex;
-            align-items: center;
-            justify-content:space-around;
-            flex-wrap: wrap;
-        }
-        .worklist .card{
-            width:397px;
-            height: 80%;
-            max-height: 600px;
-            border: 3px solid black;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .worklist .card .card-top{
-            height:50%;
-            width:100%;
-            background-color: cornflowerblue;
-        }
-        .worklist .card .card-top .card-top-img{
-            height: 100%;
-            width: 100%;
-            border-radius: 5px;
-        }
-        .worklist .card .card-body{
-            position: relative;
-            height: 50%;
-        }
-        .worklist .card .card-body h4{
-            position: relative;
-            padding-top: 10px;
-            padding-left:15px;
-            font-size: 1.6rem;
-            font-weight: bold;
-        }
-        .worklist .card .card-body p{
-            padding-top: 10px;
-            padding-left: 15px;
-            padding-right: 10px;
-            line-height: 30px;
-            text-align: justify;
-
-        }
-        .worklist .card .card-body a{
-            position: absolute;
-            bottom:10px;
-            right:15px;
-            text-decoration: none;
-            border: 1px solid black;
-            color:darkgreen;
-            border-radius: 5px;
-            padding:5px;
-            font-weight: 700;
-            transition: all 0.4s;
-        }
-        .worklist .card .card-body a:hover{
-            background-color:rgb(66, 121, 66) ;
-            color:#e787d7;
-        }
-        @media screen and (max-width:1024px) {
-            .worklist .card{
-                width:650px
-            }
-            .worklist .card + .card{
-                margin-top: 10px;
-            }
-        }
-        @media screen and (max-width:895px) {
-            .worklist .card{
-                width:550px
-            }
-        }
-        @media screen and (max-width:768px) {
-            .worklist .card{
-                width:450px
-            }
-        }
-        @media screen and (max-width:645px) {
-            .worklist .card{
-                width:350px
-            }
-        }
-        @media screen and (max-width:608px) {
-            .worklist .card{
-                width:80%;
-            }
-            
-            #Work{
-                grid-template-rows: 80px 1fr;
-                grid-template-columns: 3vw 1fr 3vw;
-                grid-column-gap: 5px;
-                grid-row-gap: 15px;
-            }
-            .Work .Work-title{
-                grid-row:1/2;
-                grid-column:1/4;
-            }
-            .Work .Work-title::before , .Work .Work-title::after{
-                transform: translateY(0) translateX(-50%) ;
-                width: 35vw;
-                left:50%;
-                right:initial;
-                top:initial;
-                border-right: initial;
-                border-bottom: 2px solid black;
-            }
-            .Work .Work-title::before{
-                bottom: 10px;
-            }
-            .Work .Work-title::after{
-                bottom: 5px;
-            }
-            .worklist{
-                grid-row:2/3;
-                grid-column: 2/3;
-            }
-        }
-            
-    </style>
-
     <setion class="Work" id="Work"> 
         <div class="Work-title"> 
             <h2>
@@ -333,7 +168,7 @@
                 <div class="card-body">
                     <h4 class='card-title'>龍臣車業</h4>
                     <p class='card-content'>
-                        職訓局分組做的專題，本人負責後端PHP程式的撰寫與API以及像是最新消息、購物車等頁面的撰寫，並使用Vue將其改成SPA的型式。
+                        職訓局分組做的專題，本人負責後端PHP程式的撰寫與API以及像是商品列表、商品內容、最新消息、購物車等頁面的撰寫，並使用Vue將其改成SPA的型式。
                     </p>
                     <a href="https://tergiversatory-anal.000webhostapp.com/" target="_blank">前往查看</a>
                 </div>
