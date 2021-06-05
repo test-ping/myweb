@@ -24,7 +24,7 @@
 }
 @media screen and (max-width:1024px){
     body{
-        grid-template-rows: 50px 800px 1fr 850px 400px 1300px  1250px 30px;
+        grid-template-rows: 50px 800px 1fr 850px 400px 1000px  1250px 30px;
     }
     div[class$='title'] h2{
         font-size: 1.4rem !important;
@@ -33,28 +33,41 @@
         height:350px;
         width: 350px;
     }
+    .worklist .card{
+        width:650px;
+        max-height:450px;
+    }
+    .worklist .card + .card{
+        margin-top: 10px;
+    }
 }
 @media screen and (max-width:895px){
     body{
-        grid-template-rows: 50px 800px 1fr 750px 400px 1300px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 750px 400px 1000px 1250px 30px;
     }
     .schoolPhoto{
         height:300px;
         width: 300px;
     }
+    .worklist .card{
+        width:550px
+    }
 }
 @media screen and (max-width:768px){
     body{
-        grid-template-rows: 50px 800px 1fr 650px 400px 1300px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 650px 400px 1000px 1250px 30px;
     }
     .schoolPhoto{
         height:250px;
         width: 250px;
     }
+    .worklist .card{
+        width:450px
+    }
 }
 @media screen and (max-width:645px){
     body{
-        grid-template-rows: 50px 800px 1fr 590px 400px 1300px 1250px 30px;
+        grid-template-rows: 50px 800px 1fr 590px 400px 1000px 1250px 30px;
     }
     .Education{
         grid-template-columns: 1fr 75% minmax(120px,15%) 1fr;
@@ -62,6 +75,9 @@
     .schoolPhoto{
         height:200px;
         width: 200px;
+    }
+    .worklist .card{
+        width:350px
     }
 }
 @media screen and (max-width:608px){
@@ -81,7 +97,7 @@
         display: block;
     }
     body{
-        grid-template-rows: 50px 800px 1fr 1500px 520px 1500px 1900px 30px;
+        grid-template-rows: 50px 800px 1fr 1500px 520px 1200px 1900px 30px;
     }
     nav{
         transition: transform 0.4s;
@@ -235,6 +251,39 @@
         top:initial;
         left:50%;
         margin-left: initial;
+    }
+    .worklist .card{
+        width:80%;
+    }
+    
+    #Work{
+        grid-template-rows: 80px 1fr;
+        grid-template-columns: 3vw 1fr 3vw;
+        grid-column-gap: 5px;
+        grid-row-gap: 15px;
+    }
+    .Work .Work-title{
+        grid-row:1/2;
+        grid-column:1/4;
+    }
+    .Work .Work-title::before , .Work .Work-title::after{
+        transform: translateY(0) translateX(-50%) ;
+        width: 35vw;
+        left:50%;
+        right:initial;
+        top:initial;
+        border-right: initial;
+        border-bottom: 2px solid black;
+    }
+    .Work .Work-title::before{
+        bottom: 10px;
+    }
+    .Work .Work-title::after{
+        bottom: 5px;
+    }
+    .worklist{
+        grid-row:2/3;
+        grid-column: 2/3;
     }
     #Contact .Contact-data .card{
         width: 80%;
