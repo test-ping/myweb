@@ -20,7 +20,8 @@
             const AboutY = document.querySelectorAll('[class$="-title"]')[0];
             const EducationY = document.querySelectorAll('[class$="-title"]')[1];
             const SkillY = document.querySelectorAll('[class$="-title"]')[2];
-            const ContactY = document.querySelectorAll('[class$="-title"]')[3];
+            const WorkY = document.querySelectorAll('[class$="-title"]')[3];
+            const ContactY = document.querySelectorAll('[class$="-title"]')[4];
             if(this.scrollY < headerY.offsetHeight + headerY.offsetTop)liProxy[0] = true;
             else liProxy[0] = false;
             if(this.scrollY >= headerY.offsetHeight + headerY.offsetTop && this.scrollY < AboutY.offsetHeight + AboutY.offsetTop)liProxy[1] = true;
@@ -29,8 +30,10 @@
             else liProxy[2] = false;
             if(this.scrollY >=EducationY.offsetHeight + EducationY.offsetTop && this.scrollY < SkillY.offsetHeight + SkillY.offsetTop)liProxy[3] = true;
             else liProxy[3] = false;
-            if(this.scrollY >= SkillY.offsetHeight + SkillY.offsetTop ) liProxy[4] = true;
+            if(this.scrollY >= SkillY.offsetHeight + SkillY.offsetTop &&  this.scrollY < WorkY.offsetHeight + WorkY.offsetTop ) liProxy[4] = true;
             else liProxy[4] = false;
+            if(this.scrollY > WorkY.offsetHeight + WorkY.offsetTop) liProxy[5] = true;
+            else liProxy[5] = false;
         }     
         window.addEventListener('scroll',navHandler);
         navHandler();
